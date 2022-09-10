@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [SOLUTION URL](https://your-solution-url.com)
+- Solution URL: [SOLUTION URL](https://www.frontendmentor.io/solutions/ecommerce-product-page-built-with-javascript-jquery-and-css-DBz7qqjDUx)
 - Live Site URL: [LIVE URL here](https://4002-nonye.github.io/Ecommerce-product-page-main/)
 
 ## My process
