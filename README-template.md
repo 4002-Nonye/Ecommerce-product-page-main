@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [SOLUTION URL](https://your-solution-url.com)
+- Live Site URL: [LIVE URL here](https://4002-nonye.github.io/Ecommerce-product-page-main/)
 
 ## My process
 
