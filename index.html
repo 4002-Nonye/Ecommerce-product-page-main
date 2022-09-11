@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <script
+      defer
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    ></script>
+    <script type="text/javascript" defer src="script.js"></script>
+
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="desktop__nav">
+        <nav class="nav">
+          <img src="images/logo.svg" alt="logo" />
+          <ul class="nav__links">
+            <li>
+              <a href="#">Collections</a>
+            </li>
+            <li>
+              <a href="#">Men</a>
+            </li>
+            <li>
+              <a href="#">Women</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__items">
+          <div>
+            <img
+              src="images/icon-cart-2.svg"
+              alt="cart"
+              class="cart__img"
+            /><span class="cart__alert alert2 hide">0</span>
+          </div>
+
+          <div class="avatar__img">
+            <img src="images/image-avatar.png" alt="avatar" class="avatar" />
+          </div>
+        </div>
+      </div>
+      <div class="desktop_cart">
+        <div class="cart__container hide">
+          <div>
+            <h1 class="cart__name">Cart</h1>
+            <hr />
+          </div>
+          <div class="make-empty">
+            <p class="empty-cart">Your cart is empty (。_。).</p>
+          </div>
+        </div>
+      </div>
+      <!-- ///////////////////MOBILE NAV////////////////////////
+ -->
+      <nav class="nav__mobile">
+        <div class="nav__item">
+          <img src="images/icon-menu.svg" class="menu" />
+
+          <img src="images/logo.svg" alt="logo" />
+        </div>
+
+        <div class="nav__item2">
+          <div>
+            <img
+              src="images/icon-cart-2.svg"
+              alt="cart"
+              class="cart__img"
+            /><span class="cart__alert alert2 hide">0</span>
+          </div>
+          <div>
+            <img
+              src="images/image-avatar.png"
+              alt="avatar"
+              class="avatar avatar__img"
+            />
+          </div>
+        </div>
+      </nav>
+      <div class="mobile-cart">
+        <div class="cart__container hide">
+          <div>
+            <h1 class="cart__name">Cart</h1>
+            <hr />
+          </div>
+          <div class="make-empty">
+            <p class="empty-cart">Your cart is empty (。_。).</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="modal__wrapper hidden">
+      <div class="modal">
+        <button class="close">
+          <img src="images/icon-close.svg" alt="close-icon" class="btn-close" />
+        </button>
+        <ul class="menu">
+          <li>Collections</li>
+          <li>Men</li>
+          <li>Women</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+    </div>
+    <div class="overlay hidden"></div>
+    <div class="border"></div>
+    <main>
+      <div class="right">
+        <div class="slider">
+          <div class="slide slide__1">
+            <img src="images/image-product-1.jpg" class="slide1" />
+          </div>
+
+          <div class="slide slide__1">
+            <img src="images/image-product-2.jpg" class="slide1" />
+          </div>
+          <div class="slide slide__1">
+            <img src="images/image-product-3.jpg" class="slide1" />
+          </div>
+          <div class="slide slide__1">
+            <img src="images/image-product-4.jpg" class="slide1" />
+          </div>
+          <div class="controls">
+            <button class="prev">
+              <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  id="path"
+                  d="M11 1 3 9l8 8"
+                  stroke="#1D2026"
+                  stroke-width="3"
+                  fill="none"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+            <button class="next">
+              <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  id="path"
+                  d="m2 1 8 8-8 8"
+                  stroke="#1D2026"
+                  stroke-width="3"
+                  fill="none"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="product__list">
+          <img
+            src="images/image-product-1-thumbnail.jpg"
+            alt="thumbnail"
+            class="thumb active"
+            data-thumb="0"
+          />
+
+          <img
+            src="images/image-product-2-thumbnail.jpg"
+            alt="thumbnail"
+            class="thumb"
+            data-thumb="1"
+          />
+
+          <img
+            src="images/image-product-3-thumbnail.jpg"
+            alt="thumbnail"
+            class="thumb"
+            data-thumb="2"
+          />
+
+          <img
+            src="images/image-product-4-thumbnail.jpg"
+            alt="thumbnail"
+            class="thumb"
+            data-thumb="3"
+          />
+        </div>
+      </div>
+
+      <div class="texts left">
+        <h1 class="company__name">Sneaker Company</h1>
+        <h2 class="sneaker__edition">Fall Limited Edition Sneakers</h2>
+        <p class="sneaker__info">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they’ll withstand everything
+          the weather can offer.
+        </p>
+        <div class="amount">
+          <p class="amt">$125.00 <span class="amount__off">50%</span></p>
+          <p class="amount__slash">$250.00</p>
+        </div>
+
+        <div class="btm__calc">
+          <div class="calc">
+            <button class="btn minus">
+              <img src="images/icon-minus.svg" />
+            </button>
+            <p class="quantity">0</p>
+            <button class="btn plus">
+              <img src="images/icon-plus.svg" />
+            </button>
+          </div>
+
+          <div class="div__cart">
+            <button class="btn__cartadd">
+              <span><img class="o" src="images/icon-cart.svg" /></span>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="light-box hidden">
+      <div class="lightbox-holder">
+        <div class="light-box-close">
+          <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+            <path
+              class="path-fill"
+              d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+              fill="#fff"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <div class="light-box-slider">
+          <div class="slide-lightbox">
+            <img src="images/image-product-1.jpg" class="light-box-slide" />
+          </div>
+
+          <div class="slide-lightbox">
+            <img src="images/image-product-2.jpg" class="light-box-slide" />
+          </div>
+          <div class="slide-lightbox">
+            <img src="images/image-product-3.jpg" class="light-box-slide" />
+          </div>
+          <div class="slide-lightbox">
+            <img src="images/image-product-4.jpg" class="light-box-slide" />
+          </div>
+        </div>
+        <div class="controls-lightbox">
+          <button class="prev">
+            <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
+              <path
+                id="path"
+                d="M11 1 3 9l8 8"
+                stroke="#1D2026"
+                stroke-width="3"
+                fill="none"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+          <button class="next">
+            <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
+              <path
+                id="path"
+                d="m2 1 8 8-8 8"
+                stroke="#1D2026"
+                stroke-width="3"
+                fill="none"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="product__list pro">
+          <img
+            src="images/image-product-1-thumbnail.jpg"
+            alt="thumbnail"
+            class="thumb active"
+            data-thumb="0"
+          />
+
+          <img
+            src="images/image-product-2-thumbnail.jpg"
+            alt="thumbnail"
+            class="thumb"
+            data-thumb="1"
+          />
+
+          <img
+            src="images/image-product-3-thumbnail.jpg"
+            alt="thumbnail"
+            class="thumb"
+            data-thumb="2"
+          />
+
+          <img
+            src="images/image-product-4-thumbnail.jpg"
+            alt="thumbnail"
+            class="thumb"
+            data-thumb="3"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Nono</a>.
+    </div>
+    <div class="overlay2 hidden"></div>
+  </body>
+</html>
